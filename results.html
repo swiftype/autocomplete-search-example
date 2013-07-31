@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Swiftype Search Results</title>
+    <!-- jQuery is required for Swiftype's plugins -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Files for autocomplete and search -->
+    <script src="jquery.swiftype.autocomplete.js"></script>
+    <script src="jquery.ba-hashchange.min.js"></script>
+    <script src="jquery.swiftype.search.js"></script>
+    <!-- Default styles for autocomplete dropdown -->
+    <link rel="stylesheet" type="text/css" href="autocomplete.css"/>
+    <!-- styles for the example itself -->
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+
+  </head>
+
+  <body>
+    <h1>Swiftype Search Results</h1>
+
+    <form id="search-form">
+      <input type="text" id="st-search-input">
+      <button type="submit">Search</button>
+    </form>
+
+    <div id="st-results-container"></div>
+
+    <script>
+    // set up autocomplete
+    $("#st-search-input").swiftype({
+      engineKey: "5jZG1gmmCTFYbSSDjpqq"
+    });
+
+    // set up search
+    $("#st-search-input").swiftypeSearch({
+      engineKey: "5jZG1gmmCTFYbSSDjpqq",
+      resultContainingElement: "#st-results-container"
+    });
+    </script>
+  </body>
+</html>
